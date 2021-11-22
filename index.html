@@ -1,12 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="ja" prefix="og: http://ogp.me/ns#">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Static Template</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="src/tab-test.css" />
+    <div class="tabs">
+      <!--タブタイトル部分-->
+      <!--POINT:　<input>のid属性と<label>のfor属性が同じなので紐づけができる-->
+      <input id="all" type="radio" name="tab_item" checked />
+      <label class="tab_item" for="all">総合</label>
+      <input id="programming" type="radio" name="tab_item" />
+      <label class="tab_item" for="programming">プログラミング</label>
+      <input id="design" type="radio" name="tab_item" />
+      <label class="tab_item" for="design">デザイン</label>
+      <!--タブの中身-->
+      <div class="tab_content" id="all_content">
+        <div class="tab_content_description">
+          <p class="c-txtsp">総合の内容がここに入ります</p>
+        </div>
+      </div>
+      <div class="tab_content" id="programming_content">
+        <div class="tab_content_description">
+          <p class="c-txtsp">プログラミングの内容がここに入ります</p>
+        </div>
+      </div>
+      <div class="tab_content" id="design_content">
+        <div class="tab_content_description">
+          <p class="c-txtsp">デザインの内容がここに入ります</p>
+        </div>
+      </div>
+    </div>
   </head>
-  <body>
-    <h1>This is a static template, there is no bundler or bundling involved!</h1>
-  </body>
 </html>
